@@ -2,278 +2,630 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no,maximum-scale=1.0, user-scalable=no">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="icon" type="image/png" href="images/fav_transparent.png"/>
-    <link rel="apple-touch-icon" sizes="192x192" href="images/fav_transparent.png">
-    <meta name="theme-color" content="#fff">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f5f1" />
+    <title>Naveen S — Engineering Manager · Frontend Platform Architecture</title>
+    <meta name="description"
+        content="Naveen S — Engineering Manager at Tekion. Frontend platform architecture, performance engineering, and AI-augmented engineering leadership. Bangalore, India." />
+
+    <link rel="icon" type="image/png" href="images/fav_transparent.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="images/fav_transparent.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+
     <link rel="stylesheet" href="main.css" />
-    <link id="theme-style" rel="stylesheet" href="">
-    <title>Naveen Shankar</title>
 </head>
 
 <body>
-    <section class="s1">
-        <div class="main-container">
-            <div class="greeting-wrapper p-3">
-                <h1 class="name"> Hi, I'm Naveen Shankar!</h1>
-            </div>
 
-            <div class="intro-wrapper">
-                <div class="nav-wrapper">
-                    <div class="button-container">
-                        <div class="dot red"></div>
-                        <div class="dot yellow"></div>
-                        <div class="dot green"></div>
-                    </div>
-                    <div class="contact">
-                        <a href="https://www.linkedin.com/in/naveen-s-74084674/" target="_blank" class="contact-link">
-                            Contact
-                        </a>
+    <!-- ============== NAV / HERO ============== -->
+    <header class="site-header" aria-label="Site header">
+        <div class="container header-grid">
+            <a href="#top" class="brand" aria-label="Naveen S — home">
+                <span class="brand-text">it's me</span>
+            </a>
 
-                    </div>
-                </div>
-                <div class="left-column">
-                    <div class="img-container">
-                        <img class="profile-img" src="images/Screenshot_20200802-120702__01.jpg" alt="Naveen"
-                            height="200px" width="200px">
-                    </div>
-                    <h4 class="theme">
-                        Personalize Theme
-                    </h4>
-                    <div class="theme-option-wrapper">
-                        <div id="light-mode" class="theme-dot"></div>
-                        <div id="blue-mode" class="theme-dot"></div>
-                        <div id="green-mode" class="theme-dot"></div>
-                        <div id="purple-mode" class="theme-dot"></div>
-                    </div>
-                    <div class="theme-text-container">
-                        <p class="theme-text">
-                            *Theme settings will be saved for your next visit
-                        </p>
-                    </div>
-                </div>
-                <div class="right-column">
-                    <div class="preview-shadow">
-                        <div class="preview">
-
-                            <div class="corner corner-tl"> </div>
-                            <div class="corner corner-tr"> </div>
-                            <div class="corner corner-bl"> </div>
-                            <div class="corner corner-br"> </div>
-
-                            <h3>What I Do</h3>
-                            <p>
-                                I'm a Principal Software Engineer at Perfios.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <nav class="primary-nav" aria-label="Primary navigation">
+                <a href="#work" class="nav-item">
+                    <span class="nav-title">My Projects <span class="arrow">&#8599;</span></span>
+                    <span class="nav-sub">Case studies from Tekion &amp; Perfios</span>
+                </a>
+                <a href="#about" class="nav-item">
+                    <span class="nav-title">About Me <span class="arrow">&#8599;</span></span>
+                    <span class="nav-sub">10+ years, four promotions, one craft</span>
+                </a>
+                <a href="#contact" class="nav-item">
+                    <span class="nav-title">Contact <span class="arrow">&#8599;</span></span>
+                    <span class="nav-sub">naveentejas1109@gmail.com</span>
+                </a>
+                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path
+                            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41">
+                        </path>
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
         </div>
-    </section>
 
-    <section class="s2">
-        <div class="main-container">
-            <div class="about-container">
-                <div class="left-about">
-                    <div class="p-2">
-                        <h3> More About Me</h3>
-                        <p class="about-para">
-                            I build projects to tickle my brain and to learn new things. I graduated from PESIT in the year 2015.
-                            <br />
-                            <br />
-                            Although occupied with office projects, I'm actively looking forward for great team
-                            and projects that interest me!
-                        </p>
+        <section class="hero" id="top">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <span class="wave" aria-hidden="true">&#9995;</span>
+                    <h1 class="hero-title">
+                        <span class="thin">Hello!</span>
+                        <span class="bold">I'm Naveen.</span>
+                    </h1>
+                    <div class="hero-role">
+                        <span class="rule" aria-hidden="true"></span>
+                        <span class="role-text">Engineering Manager</span>
+                        <svg class="spark" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                            <path d="M12 0l1.8 7.2L21 9l-7.2 1.8L12 18l-1.8-7.2L3 9l7.2-1.8z" fill="currentColor" />
+                        </svg>
                     </div>
-                    <div class="p-2">
-                        <h3>Top Expertise</h3>
-                        <p class="expert-para">
-                            Fullstack developer with primary focus on Frontend (React 
-                            <i class="fa fa-heart fa-beat heart"> </i>
-                            )! 
-                            <div class="expertise">
-                                <span>React</span>
-                                <span>Redux</span>
-                                <span>Javascript</span>
-                                <span>Java</span>
-                                <span>MySQL</span>
-                                <span>Python</span>
-                                <span>Spring boot</span>
-                                <span>Ansible</span>
-                                <span>GIT</span>
-                                <span>HTML/CSS</span>
-                            </div>
-                        </p>
+
+                    <p class="hero-desc">
+                        I'm an <strong>Engineering Manager at Tekion</strong>, leading a 15–20 engineer org across GM
+                        customer-facing platforms and OEM systems. I care about <strong>frontend platform
+                            architecture</strong>, <strong>web performance</strong>, and <strong>AI-augmented
+                            engineering</strong>.
+                    </p>
+
+                    <ul class="hero-points">
+                        <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                                <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>Frontend platform architecture at scale</li>
+                        <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                                <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>Web performance &amp; large-scale React systems</li>
+                        <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                                <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>Cross-functional engineering leadership</li>
+                    </ul>
+
+                    <div class="hero-ctas">
+                        <a href="#contact" class="btn-pill">Let's Talk</a>
+                        <a href="Naveen_S_Resume.pdf" class="link-download" download>
+                            Download CV
+                            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                                <path d="M12 4v14M5 13l7 7 7-7" stroke="currentColor" stroke-width="2" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                <div class="right-about">
-                    <div>
-                        <div class="gallery">
-                            <figure class="gallery__item gallery__item--1"><img src="/images/1.png" alt="Gallery 1"
-                                    class="gallery__img"></figure>
-                            <figure class="gallery__item gallery__item--2"><img src="/images/2.png" alt="Gallery 2"
-                                    class="gallery__img"></figure>
-                            <figure class="gallery__item gallery__item--3"><img src="/images/3.png" alt="Gal 3"
-                                    class="gallery__img"></figure>
-                            <figure class="gallery__item gallery__item--4"><img src="/images/4.png" alt="Gal 4"
-                                    class="gallery__img"></figure>
-                            <figure class="gallery__item gallery__item--5"><img src="/images/5.png" alt="Gal 5"
-                                    class="gallery__img"></figure>
-                            <figure class="gallery__item gallery__item--6"><img src="/images/6_1.png" alt="Gal 6"
-                                    class="gallery__img"></figure>
-                        </div>
+
+                <div class="hero-visual reveal">
+                    <div class="gradient-blob" aria-hidden="true"></div>
+                    <img class="hero-photo" src="images/headshot_cutout.png" alt="Portrait of Naveen S" />
+                    <div class="hello-badge" aria-hidden="true">
+                        <span>Hello</span>
                     </div>
-                    <div class="social-links">
-                        <h3 class="social-title">Find me on </h3>
-                        <!-- <div href="#" class="">Instagram</!-->
-                        <!-- <a href="3" class="linkedIn">LinkedIn</a> -->
-                        <div class="social-container">
-                            <a href="https://github.com/Naveen-S" target="_blank" class="button-wrap github">
-                                <div class="button-inner-wrap">
-                                    <i class="icon-github inactive"></i>
-                                    <i class="icon-github active"></i>
-                                </div>
-                            </a>
-
-                            <a href="https://www.linkedin.com/in/naveen-s-74084674/" target="_blank" class="button-wrap linkedin">
-                                <div class="button-inner-wrap">
-                                    <i class="icon-linkedin inactive"></i>
-                                    <i class="icon-linkedin active"></i>
-                                </div>
-                            </a>
-                            <a href="https://www.facebook.com/naveen.tejas.1/" target="_blank" class="button-wrap facebook">
-                                <div class="button-inner-wrap">
-                                    <i class="icon-facebook inactive"></i>
-                                    <i class="icon-facebook active"></i>
-                                </div>
-                            </a>
-
-                            <a href="https://www.instagram.com/naveentejas/?hl=en" target="_blank" class="button-wrap instagram">
-                                <div class="button-inner-wrap">
-                                    <i class="icon-instagram inactive"></i>
-                                    <i class="icon-instagram active"></i>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
+                    <svg class="deco-line deco-line-top" viewBox="0 0 80 40" aria-hidden="true">
+                        <path d="M5 35 L70 5"  stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        <path d="M15 35 L70 15" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    </svg>
+                    <svg class="deco-line deco-line-mid" viewBox="0 0 80 80" aria-hidden="true">
+                        <path d="M40 5 C 60 25, 60 55, 40 75" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    </svg>
                 </div>
             </div>
 
-        </div>
-    </section>
+            <!-- Marquee strip -->
+            <div class="marquee" aria-hidden="true">
+                <div class="marquee-track">
+                    <span class="m-item">React</span><span class="m-dot">&#10022;</span>
+                    <span class="m-item">TypeScript</span><span class="m-dot">&#10022;</span>
+                    <span class="m-item">Next.js</span><span class="m-dot">&#10022;</span>
+                    <span class="m-item">Web Performance</span><span class="m-dot">&#10022;</span>
+                    <span class="m-item">Frontend Architecture</span><span class="m-dot">&#10022;</span>
+                    <span class="m-item">AI-Augmented Engineering</span><span class="m-dot">&#10022;</span>
+                    <span class="m-item">Engineering Leadership</span><span class="m-dot">&#10022;</span>
 
+                    <span class="m-item">React</span><span class="m-dot">&#10022;</span>
+                    <span class="m-item">TypeScript</span><span class="m-dot">&#10022;</span>
+                    <span class="m-item">Next.js</span><span class="m-dot">&#10022;</span>
+                    <span class="m-item">Web Performance</span><span class="m-dot">&#10022;</span>
+                    <span class="m-item">Frontend Architecture</span><span class="m-dot">&#10022;</span>
+                    <span class="m-item">AI-Augmented Engineering</span><span class="m-dot">&#10022;</span>
+                    <span class="m-item">Engineering Leadership</span><span class="m-dot">&#10022;</span>
+                </div>
+            </div>
+        </section>
+    </header>
 
-    <section class="s1">
-        <div class="main-container projects-container">
-            <h3 style="text-align:center"> Some of my Professional projects</h3>
-            <div class="projects col-md-sm">
-                <div class="card project project-one">
-                    <img class="card-img-top" src="/images/p111.png" alt="Project 1">
-                    <div class="card-body">
-                        <h5> Perfios PFM </h5>
-                        <p class="card-text">
-                            Perfios ( Personal Finance Manager) application build with Javascript technology ExtJS.
+    <main>
+
+        <!-- ============== ABOUT / SOCIAL STRIP ============== -->
+        <section class="social-strip" id="about" aria-label="About">
+            <div class="container social-strip-inner">
+                <div class="social-left">
+                    <span class="rule short" aria-hidden="true"></span>
+                    <a class="social-link" href="https://www.linkedin.com/in/naveen-s-74084674/" target="_blank"
+                        rel="noopener">
+                        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="currentColor">
+                            <path
+                                d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.22 0z" />
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a class="social-link" href="https://github.com/Naveen-S" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="currentColor">
+                            <path
+                                d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.18c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.52-2.55-.29-5.24-1.28-5.24-5.71 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.04 11.04 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.44-2.69 5.41-5.26 5.7.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z" />
+                        </svg>
+                        GitHub
+                    </a>
+                    <a class="social-link" href="https://www.instagram.com/naveentejas/?hl=en" target="_blank"
+                        rel="noopener">
+                        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="currentColor">
+                            <path
+                                d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.73 3.73 0 0 1-1.38-.9 3.73 3.73 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 0 0-2.13 1.39A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.73 1.46 1.39 2.13.67.67 1.34 1.08 2.13 1.39.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.39 5.9 5.9 0 0 0 1.39-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.39-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z" />
+                        </svg>
+                        Instagram
+                    </a>
+                    <span class="rule short" aria-hidden="true"></span>
+                </div>
+                <a class="social-mail" href="mailto:naveentejas1109@gmail.com">
+                    <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <path d="M3 7l9 6 9-6" />
+                    </svg>
+                    naveentejas1109@gmail.com
+                </a>
+            </div>
+        </section>
+
+        <!-- ============== WHAT I DO (FOCUS AREAS) ============== -->
+        <section class="services" id="focus" aria-labelledby="focus-heading">
+            <div class="container services-grid">
+                <div class="services-head reveal">
+                    <span class="eyebrow"><span class="rule short" aria-hidden="true"></span>What I focus on</span>
+                    <h2 id="focus-heading" class="section-title">
+                        WHERE I <br />SPEND MY CRAFT
+                    </h2>
+                </div>
+                <div class="services-meta reveal">
+                    <p class="lede">
+                        Ten years building customer-facing systems across automotive SaaS and fintech. I lead with
+                        architecture and ship through people — pre-grooming rituals, priority frameworks, and a high bar
+                        on performance.
+                    </p>
+                    <a href="#work" class="btn-pill small">See My Work <span class="arrow">&#8594;</span></a>
+                </div>
+
+                <aside class="scroll-down" aria-hidden="true">
+                    <span class="scroll-down-text">SCROLL DOWN</span>
+                    <span class="scroll-down-line"></span>
+                    <span class="scroll-down-arrow">
+                        <svg viewBox="0 0 24 24" width="14" height="14">
+                            <path d="M12 4v14M5 13l7 7 7-7" stroke="currentColor" stroke-width="2" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </aside>
+
+                <div class="services-cards">
+                    <article class="service-card filled reveal">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 32 32" width="36" height="36" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M4 8h24v18H4z" />
+                                <path d="M4 13h24" />
+                                <circle cx="8" cy="10.5" r="0.6" fill="currentColor" />
+                                <circle cx="11" cy="10.5" r="0.6" fill="currentColor" />
+                                <path d="M10 19l-3 3 3 3M22 19l3 3-3 3M18 17l-4 10" />
+                            </svg>
+                        </div>
+                        <h3>Frontend Platform Architecture</h3>
+                        <p>Large-scale React ecosystems, micro-frontends, design-system foundations, and clean module
+                            boundaries that 15+ engineers can move through.</p>
+                        <a href="#work" class="card-link">Read more <span class="arrow">&#8594;</span></a>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 32 32" width="36" height="36" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M3 27l8-12 6 7 5-9 7 14z" />
+                                <circle cx="11" cy="15" r="1.5" fill="currentColor" />
+                                <circle cx="17" cy="22" r="1.5" fill="currentColor" />
+                                <circle cx="22" cy="13" r="1.5" fill="currentColor" />
+                            </svg>
+                        </div>
+                        <h3>Performance Engineering</h3>
+                        <p>Code-splitting, lazy loading, observability, and architectural revamps that move customer
+                            page-loads from ten seconds to three.</p>
+                        <a href="#work" class="card-link">Read more <span class="arrow">&#8594;</span></a>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 32 32" width="36" height="36" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="9" cy="11" r="3.5" />
+                                <circle cx="23" cy="11" r="3.5" />
+                                <path d="M3 26c0-3.5 3-6 6-6s6 2.5 6 6" />
+                                <path d="M17 26c0-3.5 3-6 6-6s6 2.5 6 6" />
+                            </svg>
+                        </div>
+                        <h3>Engineering Leadership</h3>
+                        <p>Sprint cadences, triage discipline, hiring, mentoring, and the partnership between Design,
+                            Product, QA, DevOps, and DBA that ships clean launches.</p>
+                        <a href="#work" class="card-link">Read more <span class="arrow">&#8594;</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== EXPERIENCE TIMELINE ============== -->
+        <section class="experience" id="experience" aria-labelledby="experience-heading">
+            <div class="container">
+                <div class="section-head centered reveal">
+                    <span class="burst" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" width="28" height="28">
+                            <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                                <path d="M16 2v8M16 22v8M2 16h8M22 16h8M6 6l5 5M21 21l5 5M26 6l-5 5M11 21l-5 5" />
+                            </g>
+                        </svg>
+                    </span>
+                    <h2 id="experience-heading" class="section-title">EXPERIENCE</h2>
+                    <p class="section-sub">Ten years, four promotions in the last five. From writing ExtJS in 2015 to
+                        running an engineering org across GM customer-facing platforms.</p>
+                </div>
+
+                <ol class="exp-list">
+                    <li class="exp-row filled reveal">
+                        <span class="exp-num">01</span>
+                        <div class="exp-body">
+                            <h3>Software Engineering Manager</h3>
+                            <p>Tekion Corp · GM customer-facing platforms &amp; OEM systems</p>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-label">Tenure</span>
+                            <span class="exp-value">Apr 2025 — Present</span>
+                        </div>
+                    </li>
+
+                    <li class="exp-row reveal">
+                        <span class="exp-num">02</span>
+                        <div class="exp-body">
+                            <h3>Lead Software Engineer</h3>
+                            <p>Tekion Corp · OEM Experience · promoted to EM at end of period</p>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-label">Tenure</span>
+                            <span class="exp-value">Jan 2024 — Apr 2025</span>
+                        </div>
+                    </li>
+
+                    <li class="exp-row reveal">
+                        <span class="exp-num">03</span>
+                        <div class="exp-body">
+                            <h3>Staff Software Engineer</h3>
+                            <p>Tekion Corp · Forms, F&amp;I, E-Sign, Live Concierge · 1,000+ dealers</p>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-label">Tenure</span>
+                            <span class="exp-value">Apr 2022 — Dec 2023</span>
+                        </div>
+                    </li>
+
+                    <li class="exp-row reveal">
+                        <span class="exp-num">04</span>
+                        <div class="exp-body">
+                            <h3>Senior Software Engineer</h3>
+                            <p>Tekion Corp · Chevrolet Bolt EV Secure Checkout · first OEM launch</p>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-label">Tenure</span>
+                            <span class="exp-value">Feb 2021 — Mar 2022</span>
+                        </div>
+                    </li>
+
+                    <li class="exp-row reveal">
+                        <span class="exp-num">05</span>
+                        <div class="exp-body">
+                            <h3>Principal Software Development Engineer</h3>
+                            <p>Perfios · Account Aggregator &amp; Personal Finance Manager</p>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-label">Tenure</span>
+                            <span class="exp-value">Apr 2019 — Feb 2021</span>
+                        </div>
+                    </li>
+
+                    <li class="exp-row reveal">
+                        <span class="exp-num">06</span>
+                        <div class="exp-body">
+                            <h3>Senior Software Development Engineer</h3>
+                            <p>Perfios · PFM mobile, Advisor App · React / Redux</p>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-label">Tenure</span>
+                            <span class="exp-value">Apr 2016 — Mar 2019</span>
+                        </div>
+                    </li>
+
+                    <li class="exp-row reveal">
+                        <span class="exp-num">07</span>
+                        <div class="exp-body">
+                            <h3>Earlier roles</h3>
+                            <p>Perfios (ExtJS) · IBM intern (license-server prototype) · Ordell Ugo (iNOAH, best-project
+                                award)</p>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-label">Tenure</span>
+                            <span class="exp-value">2013 — 2016</span>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ============== CASE STUDY ============== -->
+        <section class="case-study" id="work" aria-labelledby="case-heading">
+            <div class="container">
+                <div class="section-head centered reveal">
+                    <span class="burst" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" width="28" height="28">
+                            <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                                <path d="M16 2v8M16 22v8M2 16h8M22 16h8M6 6l5 5M21 21l5 5M26 6l-5 5M11 21l-5 5" />
+                            </g>
+                        </svg>
+                    </span>
+                    <h2 id="case-heading" class="section-title">CASE STUDY</h2>
+                    <p class="section-sub">Three pieces of work that I keep returning to — what they were, what I owned,
+                        and what they moved.</p>
+                </div>
+
+                <div class="case-grid">
+
+                    <article class="case-card reveal">
+                        <div class="case-tag">01 · Performance</div>
+                        <h3 class="case-title">Configurator Performance Revamp</h3>
+                        <p class="case-org">Tekion · GM customer-facing platforms</p>
+                        <p class="case-desc">
+                            Led an architectural revamp of the vehicle Configurator. Introduced trim-level rendering,
+                            consolidated downstream services, and rebuilt the data layer for the OEM customer flow.
                         </p>
-                        <a href="https://www.perfios.com/KuberaVault/login" target="_blank" class="hover-shadow hover-color">
-                            <span>M</span><span>o</span><span>r</span><span>e</span>
+                        <ul class="case-impact">
+                            <li><strong>~10s → ~3s</strong> customer page-load</li>
+                            <li><strong>70%</strong> reduction in backend services</li>
+                            <li>Material infrastructure cost savings</li>
+                        </ul>
+                    </article>
 
-                        </a>
-                    </div>
-                </div>
-                <div class="card project project-two">
-                    <img class="card-img-top" src="/images/p222.png" alt="Project 2">
-                    <div class="card-body">
-                        <h5>Perfios PFM responsive app</h5>
-                        <p> Complete revamp of previous version, Responsive PFM app build with React, redux and a lot of love <i
-                                class="fa fa-heart fa-beat heart"> </i>!</p>
-                        <a href="https://play.google.com/store/apps/details?id=com.perfios&hl=en_IN" target="_blank" class="hover-shadow hover-color">
-                            <span>M</span><span>o</span><span>r</span><span>e</span>
+                    <article class="case-card reveal">
+                        <div class="case-tag">02 · Cross-functional delivery</div>
+                        <h3 class="case-title">Three OEM Launches in One Year</h3>
+                        <p class="case-org">Tekion · Buick &amp; GMC · OEM Portal 2.0 · CarBravo</p>
+                        <p class="case-desc">
+                            Aligned Design, Data Migration, DBA, DevOps, and Product on a shared release plan across
+                            three customer-facing launches, with a 15–20 engineer team running parallel workstreams.
+                        </p>
+                        <ul class="case-impact">
+                            <li><strong>3 launches</strong> shipped on time</li>
+                            <li><strong>Zero</strong> major post-launch concerns</li>
+                            <li>Open-issue backlog cut from ~1,500 to ~800 in a single sprint</li>
+                        </ul>
+                    </article>
 
-                        </a>
-                    </div>
-                </div>
-                <div class="card project project-three">
-                    <img class="card-img-top" src="/images/p333.png" alt="Project 2">
-                    <div class="card-body">
-                        <h5>Perfios Account Aggregator</h5>
-                        <p> AA is an app which manages user's consents and facilitate data
-                            movement from FIP to FIU.</p>
-                        <a href="https://www.perfios-aa.in/" target="_blank" class="hover-shadow hover-color">
-                            <span>M</span><span>o</span><span>r</span><span>e</span>
-
-                        </a>
-                    </div>
+                    <article class="case-card reveal">
+                        <div class="case-tag">03 · Product invention</div>
+                        <h3 class="case-title">Concierge Pro &amp; Live Concierge</h3>
+                        <p class="case-org">Tekion · A first-in-DMS-space feature</p>
+                        <p class="case-desc">
+                            Invented Live Concierge for in-home dealer/customer document sharing and e-signing during
+                            the Bolt EV launch, then extended it into Concierge Pro — real-time video walkthrough
+                            combined with e-sign.
+                        </p>
+                        <ul class="case-impact">
+                            <li><strong>1,000+</strong> enrolled dealers</li>
+                            <li>First-in-DMS-space combination of video walkthrough &amp; e-sign</li>
+                            <li>Flagship customer experience across the platform</li>
+                        </ul>
+                    </article>
 
                 </div>
             </div>
+        </section>
+
+        <!-- ============== STATS ============== -->
+        <section class="stats" aria-label="By the numbers">
+            <div class="container stats-grid">
+                <div class="stat reveal">
+                    <span class="stat-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" width="34" height="34" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="6" y="4" width="20" height="24" rx="2" />
+                            <path d="M11 10h10M11 15h10M11 20h6" />
+                        </svg>
+                    </span>
+                    <span class="stat-num">10+</span>
+                    <span class="stat-label">Years building<br />frontend systems</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" width="34" height="34" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 4l3.7 7.5 8.3 1.2-6 5.9 1.4 8.2L16 22.9l-7.4 3.9 1.4-8.2-6-5.9 8.3-1.2z" />
+                        </svg>
+                    </span>
+                    <span class="stat-num">04</span>
+                    <span class="stat-label">Promotions<br />in five years</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" width="34" height="34" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="12" r="4" />
+                            <circle cx="22" cy="12" r="4" />
+                            <path d="M4 26c0-4 3-7 7-7s7 3 7 7M16 26c0-4 3-7 7-7s5 2 6 5" />
+                        </svg>
+                    </span>
+                    <span class="stat-num">15–20</span>
+                    <span class="stat-label">Engineers<br />in current org</span>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" width="34" height="34" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="16" cy="16" r="12" />
+                            <path d="M4 16h24M16 4c4 4 4 20 0 24M16 4c-4 4-4 20 0 24" />
+                        </svg>
+                    </span>
+                    <span class="stat-num">1,000+</span>
+                    <span class="stat-label">Dealers using<br />products I've shipped</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== SKILLS ============== -->
+        <section class="skills" aria-labelledby="skills-heading">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow"><span class="rule short" aria-hidden="true"></span>Toolbox</span>
+                    <h2 id="skills-heading" class="section-title small">THE STACK I <br />WORK WITH</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-group reveal">
+                        <h4>Frontend</h4>
+                        <ul>
+                            <li>React.js</li>
+                            <li>Next.js</li>
+                            <li>TypeScript</li>
+                            <li>Redux</li>
+                            <li>Tailwind CSS</li>
+                            <li>Webpack</li>
+                            <li>Material UI</li>
+                        </ul>
+                    </div>
+                    <div class="skill-group reveal">
+                        <h4>Architecture &amp; Performance</h4>
+                        <ul>
+                            <li>Frontend Architecture</li>
+                            <li>System Design</li>
+                            <li>Micro-Frontends</li>
+                            <li>Code-Splitting</li>
+                            <li>Lazy Loading</li>
+                            <li>Web Performance</li>
+                        </ul>
+                    </div>
+                    <div class="skill-group reveal">
+                        <h4>Platform &amp; Quality</h4>
+                        <ul>
+                            <li>CI/CD</li>
+                            <li>Sentry</li>
+                            <li>New Relic</li>
+                            <li>Web App Security</li>
+                            <li>SDLC</li>
+                            <li>Code Review</li>
+                        </ul>
+                    </div>
+                    <div class="skill-group reveal">
+                        <h4>AI &amp; Productivity</h4>
+                        <ul>
+                            <li>LLM-assisted debugging</li>
+                            <li>Prompt-driven workflows</li>
+                            <li>Claude Code</li>
+                            <li>GitHub Copilot</li>
+                            <li>Cursor</li>
+                            <li>AI-powered sprint tooling</li>
+                        </ul>
+                    </div>
+                    <div class="skill-group reveal">
+                        <h4>Leadership</h4>
+                        <ul>
+                            <li>Engineering Management</li>
+                            <li>Cross-Functional Leadership</li>
+                            <li>Hiring &amp; Talent</li>
+                            <li>Mentoring</li>
+                            <li>Stakeholder Management</li>
+                            <li>Agile / Scrum</li>
+                        </ul>
+                    </div>
+                    <div class="skill-group reveal">
+                        <h4>Domains</h4>
+                        <ul>
+                            <li>Automotive SaaS</li>
+                            <li>DMS</li>
+                            <li>Fintech</li>
+                            <li>Account Aggregator</li>
+                            <li>E-commerce</li>
+                            <li>E-Signature</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== CONTACT / CTA ============== -->
+        <section class="cta" id="contact" aria-labelledby="cta-heading">
+            <div class="container cta-inner reveal">
+                <h2 id="cta-heading" class="cta-title">
+                    <span class="thin">Say Hi!</span>
+                    <span class="bold">and tell me what you're building.</span>
+                    <svg class="cta-arrow" viewBox="0 0 220 60" aria-hidden="true">
+                        <path d="M0 30 C 60 10, 140 50, 210 30" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" />
+                        <path d="M195 18 L 215 30 L 195 42" stroke="currentColor" stroke-width="2" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </h2>
+                <p class="cta-sub">Open to interesting frontend platform &amp; engineering leadership conversations.
+                    Bangalore, India.</p>
+
+                <div class="cta-actions">
+                    <a href="mailto:naveentejas1109@gmail.com" class="btn-pill">naveentejas1109@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/naveen-s-74084674/" target="_blank" rel="noopener"
+                        class="link-download">
+                        Reach me on LinkedIn
+                        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                            <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============== FOOTER ============== -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="footer-name">Naveen S</span>
+                <span class="footer-tagline">Engineering Manager · Bangalore, India</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/naveen-s-74084674/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/Naveen-S" target="_blank" rel="noopener">GitHub</a>
+                <a href="mailto:naveentejas1109@gmail.com">Email</a>
+                <a href="Naveen_S_Resume.pdf" download>Resume</a>
+            </div>
+            <div class="footer-copy">&copy; <span id="year"></span> Naveen S. All rights reserved.</div>
         </div>
-    </section>
+    </footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
-    <script >
-
-        window.addEventListener('load', () => {
-            var theme = localStorage.getItem("theme");
-            if(theme){
-                document.getElementById("theme-style").setAttribute("href", theme);
-                let themeMode = getThemeName(theme);
-                changeMetaThemeColor(themeMode);
-            }
-        });
-
-        let themes = [
-            {theme: "light-mode", val: "./default.css"},
-            {theme: "blue-mode", val: "./blue.css"},
-            {theme: "green-mode", val: "./green.css"},
-            {theme: "purple-mode", val: "./purple.css"}
-        ]
-        themes.forEach((item) => {
-            document.getElementById(item.theme).addEventListener('click', () => {
-                localStorage.setItem("theme", item.val);
-                document.getElementById("theme-style").setAttribute("href", item.val);
-
-                // Also change the theme-color of the page
-                changeMetaThemeColor(item.theme);
-            })
-        });
-
-        const changeMetaThemeColor = (theme) => {
-            const themeColors = {
-                "light-mode": "#fff", 
-                "blue-mode": "#15202B", 
-                "green-mode": "#606B56", 
-                "purple-mode": "#46344E", 
-                };
-            let metaThemeColor = document.querySelector("meta[name=theme-color]");
-            metaThemeColor.setAttribute("content", themeColors[theme]);
-        }
-
-        const getThemeName = (themeVal) => {
-            let themeObj = themes.filter(theme => {
-                return theme.val === themeVal;
-            })[0];
-            return themeObj.theme;
-        }
-    </script>
+    <script src="app.js" defer></script>
 </body>
 
 </html>
